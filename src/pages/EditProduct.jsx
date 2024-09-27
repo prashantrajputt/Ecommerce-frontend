@@ -29,7 +29,7 @@ const EditProduct = () => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get(`http://localhost:5000/product/${id}`)
+            .get(`https://ecommerce-ypsz.onrender.com/product/${id}`)
             .then((response) => {
                 setName(response.data.name);
                 setPriceInCents(response.data.priceInCents);
@@ -49,7 +49,7 @@ const EditProduct = () => {
         const data = { name, priceInCents,description, category };
         setLoading(true);
         axios
-            .put(`http://localhost:5000/product/${id}`, data, config)
+            .put(`https://ecommerce-ypsz.onrender.com/product/${id}`, data, config)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar('Product edited successfully', {variant: 'success'});

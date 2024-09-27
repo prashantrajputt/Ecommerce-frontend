@@ -55,7 +55,7 @@ const uploadFile = async () => {
     data.append('file', img);
 
     try {
-        const uploadUrl = (`http://localhost:5000/upload-image`);
+        const uploadUrl = (`https://ecommerce-ypsz.onrender.com/upload-image`);
         const res = await axios.post(uploadUrl, data);
 
         const { secure_url } = res.data;
@@ -97,7 +97,7 @@ const handleSaveProduct = async () => {
             category
         };
 
-        await axios.post(`http://localhost:5000/product`, formData, config);
+        await axios.post(`https://ecommerce-ypsz.onrender.com/product`, formData, config);
 
         enqueueSnackbar('Product saved successfully', { variant: 'success' });
         navigate('/admin');

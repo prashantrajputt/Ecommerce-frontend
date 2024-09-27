@@ -29,7 +29,7 @@ const handleCheckout = async () => {
     }));
 
     try {
-            const response = await axios.post(`http://localhost:5000/stripe/create-checkout-session`, {
+            const response = await axios.post(`https://ecommerce-ypsz.onrender.com/stripe/create-checkout-session`, {
                 products: transformedItems
             });
 

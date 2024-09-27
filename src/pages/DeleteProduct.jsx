@@ -23,7 +23,7 @@ const DeleteProduct = () => {
         setLoading(true);
 
         axios
-            .delete(`http://localhost:5000/product/${id}`, config)
+            .delete(`https://ecommerce-ypsz.onrender.com/product/${id}`, config)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar('Product Deleted', { variant: 'success' });

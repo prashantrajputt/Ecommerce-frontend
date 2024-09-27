@@ -37,7 +37,7 @@ const Register = () => {
                 }
             };
 
-            await axios.post(`http://localhost:5000/auth/register`, {
+            await axios.post(`https://ecommerce-ypsz.onrender.com/auth/register`, {
                 name: userData.name,
                 email: userData.email,
                 password: userData.password

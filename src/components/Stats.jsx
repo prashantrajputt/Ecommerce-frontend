@@ -12,7 +12,7 @@ const Stats = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/stripe/api/stats`);
+        const response = await fetch(`https://ecommerce-ypsz.onrender.com/stripe/api/stats`);
         
         if (!response.ok) {
           throw new Error('Network response was not ok');

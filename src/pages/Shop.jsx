@@ -10,7 +10,7 @@ const Shop = () => {
 
   useEffect(() => {
     axios
-        .get(`http://localhost:5000/product`)
+        .get(`https://ecommerce-ypsz.onrender.com/product`)
         .then((response) => {
             setProduct(response.data.data);
             setFilteredProducts(response.data.data);
